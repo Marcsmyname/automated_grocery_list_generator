@@ -92,6 +92,8 @@ while new_item.upper() != "DONE":
         shopping_list.extend(recipes.indian_butter_chicken)
     elif new_item == 'salsa verde chicken':
         shopping_list.extend(recipes.salsa_verde_chicken)
+    elif new_item == 'chicken_tortilla_soup':
+        shopping_list.extend(chicken_tortilla_soup)
     elif new_item.upper() == "HELP":
         print(recipes)
     elif new_item.upper() != "DONE":
@@ -111,4 +113,3 @@ for recipe in counter.keys():
     print( recipe + " " + str(counter[recipe]))
 print("There are " + str(total) + " ingredients to buy. Not including pantry items.")
 #print("There are " + str(len(counter.keys())) + " ingredients to buy. Not including pantry items.")
-

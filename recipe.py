@@ -59,6 +59,8 @@ class Recipe():
         self.creamy_chicken_penne = ['1_Lb__chicken_breast', '1_Lb__chicken_breast', 'parmesan cheese', '14.5_oz_DICED_tomatoes', 'heavy_cream', 'heavy_cream', 'penne pasta', 'freezer_bag',]
         self.salsa_verde_chicken = ['1_Lb__chicken_breast', '1_Lb__chicken_breast', 'black_beans', 'frozen_corn', 'cream_cheese', 'salsa_verde', ]
         self.ministrone_soup_w_ground_beef = ['1_Lb_ground_beef', 'dark_red_kidney_beans', 'spinach', 'butternut_squash', 'zucchini', 'onion', 'freezer_bag', ]
+        self.chicken_tortilla_soup = chicken_tortilla_soup = [ '1_Lb__chicken_breast', 'onion', 'red_bell_pepper', '14.5_oz_DICED_tomatoes', '1.5 cups frozen corn', 'black_beans', '1TB Chili Powder', '1/2 tsp salt', '1/2 TEASPOON GROUND CUMIN','1/2 TEASPOON GARLIC POWDER', '4 CUPS LOW-SODIUM CHICKEN BROTH *NOT NEEDED UNTIL DAY OF COOKING','4 CORN TORTILLAS--SLICED *NOT NEEDED UNTIL DAY OF SERVING',
+                        ]
 
     def __str__(self):
         rep = 'Options are: meats,\nvegtables, suggested_sides, \nchili_spiced_beef_and_carrots, \nmonster_cheese_burgers, \ntuscan_steak_and_green_peppers, \nbeef_and_cabbage_soup, \nsloppy_joes, chicken_spinach_alfredo'
@@ -66,4 +68,3 @@ class Recipe():
         rep += ', \nranch_popcorn_chicken, \ncheesy_chicken_veggie_casserole, \npulled_pork, \nsuasage_and_peppers, \npotatoe_corn_chowder, \njalepeno_and_bacon, \nindian_butter_chicken, \ncreamy_chicken_penne, \nsalsa_verde_chicken'
         rep += ', \nministrone_soup_w_ground_beef'
         return rep
-    

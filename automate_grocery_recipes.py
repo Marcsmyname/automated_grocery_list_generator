@@ -78,7 +78,7 @@ while new_item.upper() != "DONE":
         shopping_list.extend(recipes.white_chicken_chili)
     elif new_item == 'ranch popcorn chicken':
         shopping_list.extend(recipes.ranch_popcorn_chicken)
-    elif new_item == 'cheesy_chicken veggie casserole':
+    elif new_item == 'cheesy chicken veggie casserole':
         shopping_list.extend(recipes.cheesy_chicken_veggie_casserole)
     elif new_item == 'pulled pork':
         shopping_list.extend(recipes.pulled_pork)
@@ -92,8 +92,8 @@ while new_item.upper() != "DONE":
         shopping_list.extend(recipes.indian_butter_chicken)
     elif new_item == 'salsa verde chicken':
         shopping_list.extend(recipes.salsa_verde_chicken)
-    elif new_item == 'chicken_tortilla_soup':
-        shopping_list.extend(chicken_tortilla_soup)
+    elif new_item == 'chicken tortilla soup':
+        shopping_list.extend(recipes.chicken_tortilla_soup)
     elif new_item.upper() == "HELP":
         print(recipes)
     elif new_item.upper() != "DONE":
@@ -111,5 +111,7 @@ total = 0
 for recipe in counter.keys():
     total = total + counter[recipe]
     print( recipe + " " + str(counter[recipe]))
+print('* items are not needed until day of cooking.')
+
 print("There are " + str(total) + " ingredients to buy. Not including pantry items.")
 #print("There are " + str(len(counter.keys())) + " ingredients to buy. Not including pantry items.")

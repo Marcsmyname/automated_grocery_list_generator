@@ -10,9 +10,8 @@ class Food():
   def __init__(self, amount=0, name=''):
     self.amount = Mixed(amount)
     self.name = name;
-    #14.5 oz. can  
-    #add aritmetic operations
-    
+    #ie 14.5 oz. can  
+   
   def __str__(self):
     if not name:
       return amount
@@ -42,6 +41,10 @@ class Food():
   
   def __rtruediv__self, lhs):
     return lhs / self.amount
+  
+  #vary for each food item. All Fractions should round up to total number of items needed. 10 oz, 12 oz would be 2 10 oz, etc?
+  def __mod__(self, rhs):
+    pass
 
 #foods need to be modified, unit of measure or name
 #meats
@@ -245,20 +248,77 @@ class CheddarCheese(Food):
     
   def __str__(self):
     return Super.__str__() + " " + self.food
+
+class ShreddedCheddar(Food): #same as above 
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'shredded cheddar'
+    self.aisle = 'dairy'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+  
+#Veggies
+class baby carrots(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'baby carrots'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class Carrots(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'carrots'
+    self.aisle = 'veggie'
+   
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+
+class Onion(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'onion'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class Spinach(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'spinach'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class FrozenBellPeppers(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'frozen bell peppers'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class GreenOnions(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'green onions'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
 '''
 class ChickenBreast(Food):
   def __init__(self, amount=1, unitOfMeasure='Lb'):
     Super().__init__(unitOfMeasure, amount)
     self.food = 'chicken breast'
-    self.aisle = 'meat'
-    
-  def __str__(self):
-    return Super.__str__() + " " + self.food
-class ChickenBreast(Food):
-  def __init__(self, amount=1, unitOfMeasure='Lb'):
-    Super().__init__(unitOfMeasure, amount)
-    self.food = 'chicken breast'
-    self.aisle = 'meat'
+    self.aisle = 'veggie'
     
   def __str__(self):
     return Super.__str__() + " " + self.food
@@ -267,17 +327,7 @@ class ChickenBreast(Food):
   def __init__(self, amount=1, unitOfMeasure='Lb'):
     Super().__init__(unitOfMeasure, amount)
     self.food = 'chicken breast'
-    self.aisle = 'meat'
-    
-  def __str__(self):
-    return Super.__str__() + " " + self.food
-
-
-class ChickenBreast(Food):
-  def __init__(self, amount=1, unitOfMeasure='Lb'):
-    Super().__init__(unitOfMeasure, amount)
-    self.food = 'chicken breast'
-    self.aisle = 'meat'
+    self.aisle = 'veggie'
     
   def __str__(self):
     return Super.__str__() + " " + self.food
@@ -286,7 +336,7 @@ class ChickenBreast(Food):
   def __init__(self, amount=1, unitOfMeasure='Lb'):
     Super().__init__(unitOfMeasure, amount)
     self.food = 'chicken breast'
-    self.aisle = 'meat'
+    self.aisle = 'veggie'
     
   def __str__(self):
     return Super.__str__() + " " + self.food
@@ -295,7 +345,52 @@ class ChickenBreast(Food):
   def __init__(self, amount=1, unitOfMeasure='Lb'):
     Super().__init__(unitOfMeasure, amount)
     self.food = 'chicken breast'
-    self.aisle = 'meat'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class ChickenBreast(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'chicken breast'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class ChickenBreast(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'chicken breast'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class ChickenBreast(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'chicken breast'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class ChickenBreast(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'chicken breast'
+    self.aisle = 'veggie'
+    
+  def __str__(self):
+    return Super.__str__() + " " + self.food
+
+class ChickenBreast(Food):
+  def __init__(self, amount=1, unitOfMeasure='Lb'):
+    Super().__init__(unitOfMeasure, amount)
+    self.food = 'chicken breast'
+    self.aisle = 'veggie'
     
   def __str__(self):
     return Super.__str__() + " " + self.food
@@ -311,28 +406,27 @@ class FreezerBag(Food):
   def __str__(self):
     return Super.__str__() + " " + self.food
 
-'''  self.chili_spiced_beef_and_carrots = ['1 lb baby carrots', '1 lb baby carrots','',]
-self.tuscan_steak_and_green_peppers = [ 'frozen bell peppers','onion', '14.5 oz DICED tomatoes']
-self.beef_and_cabbage_soup = ['small cabage', 'onion', 'carrots', '14.5 oz DICED tomatoes']
-self.sloppy_joes = ['onion','red bell pepper', '15 OZ. tomato Sauce']
-self.chicken_spinach_alfredo = ['spinach']
+'''
+self.tuscan_steak_and_green_peppers = [ '14.5 oz DICED tomatoes']
+self.beef_and_cabbage_soup = ['small cabage' '14.5 oz DICED tomatoes']
+self.sloppy_joes = ['red bell pepper', '15 OZ. tomato Sauce']
 self.chicken_tikka_masala = ['15 OZ. tomato sauce','15 OZ. tomato sauce']
 self.shredded_chicken_fajitas = ['red bell pepper']
 self.chicken_cordon_bleu_casserole = ['extra wide egg noodles', 'italian bread crumbs']
 self.chicken_and_sausage_orzo =['8oz._tomatoe SAUCE', 'orzo']
-self.italian_sausage_rigatoni = ['14.5 oz DICED tomatoes','14.5 oz DICED tomatoes', 'onion', '4.5 cups rigatoni']
-self.gvb_soup_turkey = ['carrots', 'zucchini',]
-self.tuscaan_torellini_soup = ['24oz pasta sauce', 'cannellini beans', 'carrot', 'onion', 'green beans', 'frozen cheese tortellini']
+self.italian_sausage_rigatoni = ['14.5 oz DICED tomatoes','14.5 oz DICED tomatoes','4.5 cups rigatoni']
+self.gvb_soup_turkey = ['zucchini',]
+self.tuscaan_torellini_soup = ['24oz pasta sauce', 'cannellini beans' , 'green beans', 'frozen cheese tortellini']
 self.white_chicken_chili = ['salsa verde', 'cannellini beans', 'cannellini beans', ]
 self.ranch_popcorn_chicken = ['egg', 'cornflakes',]
-self.cheesy_chicken_veggie_casserole = ['green onions', 'shredded cheddar', 'ritz', ]
-self.pulled_pork = ['onion',]
-self.suasage_and_peppers =['rainbow peppers','rainbow peppers', 'rainbow peppers', 'onion']
+self.cheesy_chicken_veggie_casserole = ['', 'ritz', ]
+self.suasage_and_peppers =['rainbow peppers','rainbow peppers', 'rainbow peppers']
 self.potatoe_corn_chowder = ['red potatoes', 'red potatoes', 'red potatoes', 'celery']
-self.jalepeno_and_bacon = ['elbow macoroni', 'cheddar cheese', 'jalepeno', 'onions']
-self.indian_butter_chicken = [' '15oz tomatoe sauce', '15oz tomatoe sauce']', 'butternut squash', 'zucchini', 'onion']
-self.chicken_tortilla_soup = ['onion', 'red bell pepper', '14.5 oz DICED tomatoes', '1.5 cups frozen corn', 'black beans', '1TB Chili Powder', '1/2 tsp salt', '1/2 tea GROUND CUMIN','1/2 tea GARLIC POWDER','4 CUPS LOW-SODIUM CHICKEN BROTH*','
+self.jalepeno_and_bacon = ['elbow macoroni' 'jalepeno']
+self.indian_butter_chicken = [' '15oz tomatoe sauce', '15oz tomatoe sauce']', 'butternut squash', 'zucchini']
+self.chicken_tortilla_soup = ['red bell pepper', '14.5 oz DICED tomatoes', '1.5 cups frozen corn', 'black beans', '1TB Chili Powder', '1/2 tsp salt', '1/2 tea GROUND CUMIN','1/2 tea GARLIC POWDER','4 CUPS LOW-SODIUM CHICKEN BROTH*','
 self.creamy_chicken_penne = ['14.5 oz DICED tomatoes', 'penne pasta']
 self.salsa_verde_chicken = ['black beans', 'frozen corn', 'salsa verde',]
 self.ministrone_soup_w_ground_beef = ['dark red kidney beans', 'spinach CORN TORTILLAS*',]
-#self.chicken_tortilla_soup = ['onion', 'red bell pepper', '14.5 oz DICED tomatoes', '1.5 cups frozen corn', 'black beans', '1TB Chili Powder', '1/2 tsp salt', '1/2 tea GROUND CUMIN','1/2 tea GARLIC POWDER','4 CUPS LOW-SODIUM CHICKEN BROTH *NOT NEEDED UNTIL DAY OF COOKING','4 CORN TORTILLAS--SLICED *NOT NEEDED UNTIL DAY OF SERVING',]'''
+#self.chicken_tortilla_soup = ['red bell pepper', '14.5 oz DICED tomatoes', '1.5 cups frozen corn', 'black beans', '1TB Chili Powder', '1/2 tsp salt', '1/2 tea GROUND CUMIN','1/2 tea GARLIC POWDER','4 CUPS LOW-SODIUM CHICKEN BROTH *NOT NEEDED UNTIL DAY OF COOKING','4 CORN TORTILLAS--SLICED *NOT NEEDED UNTIL DAY OF SERVING',]'''
+#Dry Measure Equivalents: nested list in food or recipe

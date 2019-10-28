@@ -18,6 +18,30 @@ class Food():
       return amount
     else:
       return amount +  " " + name
+    
+  def __add__(self, rhs):
+    return self.amount + rhs
+  
+  def __radd__(self, lhs):
+    return lhs + self.amount
+  
+  def __sub__(self, rhs):
+    return self.amount - rhs
+  
+  def __rsub__(self, lhs):
+    return lhs - self.amount
+  
+  def __mul__(self, rhs):
+    return self.amount * rhs
+  
+  def __rmul__(self, lhs):
+    return self.amount * lhs
+  
+  def __truediv__(self, rhs):
+    return self.amount / rhs
+  
+  def __rtruediv__self, lhs):
+    return lhs / self.amount
 
 #foods need to be modified, unit of measure or name
 #meats

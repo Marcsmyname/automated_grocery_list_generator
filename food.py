@@ -11,6 +11,8 @@ class Food():
     self.amount = Mixed(amount)
     self.name = name;
     #14.5 oz. can  
+    #add aritmetic operations
+    
   def __str__(self):
     if not name:
       return amount

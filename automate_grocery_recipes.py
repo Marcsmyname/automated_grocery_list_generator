@@ -35,6 +35,8 @@ border = "="*11
 counterDict = {}
 new_item = ''
 
+#print a better menu that asks for order of store, create default. Finish Food and how it will be used with Recipe first
+
 #Treehouse code to start with:
 
 shopping_list = []

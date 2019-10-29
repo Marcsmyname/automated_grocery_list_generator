@@ -34,6 +34,8 @@ recipes = Recipe()
 border = "="*11
 counterDict = {}
 new_item = ''
+
+#these are the store aisles that will be used to eventually sort grocery list
 aisles = [['produce'],['meat', 'cheese', 'lunch meat',], ['dairy', 'eggs', 'juice', 'pies', 'yogurt', 'butter'],
           ['frozen vegetables'], ['housewares'], ['cereal', 'coffee/tea'], ['baking', 'spices', 'PBJ'],
           ['boxed dinner', 'canned meat', 'pasta/sauce'], ['soup', 'mexican', 'asian'], 

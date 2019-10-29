@@ -1,4 +1,5 @@
 from recipe import Recipe
+import Food
 
 def cleanPrint(aList, Dict=False):
     """Prints inside of a list or dictionary. List is the Default print."""
@@ -29,11 +30,23 @@ def cleanPrint(aList, Dict=False):
                 
     return counterDict
 
+def parse(name, foods):
+    inc = 0
+    lhs = name[inc]
+    rhs = name[inc + 1:]
+    while rhs not in foods.keys():
+        inc = inc + 1
+        lhs = name[0:inc]
+        rhs = name[inc + 1:]
+    return (lhs, rhs)
 
 recipes = Recipe()
 border = "="*11
 counterDict = {}
 new_item = ''
+shopping_list = []
+food_list = []
+store_list = []
 
 #these are the store aisles that will be used to eventually sort grocery list
 aisles = [['produce'],['meat', 'cheese', 'lunch meat',], ['dairy', 'eggs', 'juice', 'pies', 'yogurt', 'butter'],
@@ -41,12 +54,6 @@ aisles = [['produce'],['meat', 'cheese', 'lunch meat',], ['dairy', 'eggs', 'juic
           ['boxed dinner', 'canned meat', 'pasta/sauce'], ['soup', 'mexican', 'asian'], 
           ['condiments', 'canned fruits/veggies & juice'], ['cookies & crackers'], ['candy, snacks, & chips'], ['bread'],
          ['ice']]
-
-#print a better menu that asks for order of store, create default. Finish Food and how it will be used with Recipe first
-
-#Treehouse code to start with:
-
-shopping_list = []
 
 while new_item.upper() != "DONE":
     print("What should we buy from the store?  \n")

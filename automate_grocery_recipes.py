@@ -34,6 +34,11 @@ recipes = Recipe()
 border = "="*11
 counterDict = {}
 new_item = ''
+aisles = [['produce'],['meat', 'cheese', 'lunch meat',], ['dairy', 'eggs', 'juice', 'pies', 'yogurt', 'butter'],
+          ['frozen vegetables'], ['housewares'], ['cereal', 'coffee/tea'], ['baking', 'spices', 'PBJ'],
+          ['boxed dinner', 'canned meat', 'pasta/sauce'], ['soup', 'mexican', 'asian'], 
+          ['condiments', 'canned fruits/veggies & juice'], ['cookies & crackers'], ['candy, snacks, & chips'], ['bread'],
+         ['ice']]
 
 #print a better menu that asks for order of store, create default. Finish Food and how it will be used with Recipe first
 

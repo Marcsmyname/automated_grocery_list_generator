@@ -1,4 +1,5 @@
 from recipe import Recipe
+import Food
 
 def cleanPrint(aList, Dict=False):
     """Prints inside of a list or dictionary. List is the Default print."""
@@ -29,15 +30,46 @@ def cleanPrint(aList, Dict=False):
                 
     return counterDict
 
+def parse(name, foodDict):
+    foodList = [None] * 2 
+    rhs = ''
+    inc = 1
+    lhs = name[inc]
+
+    while lhs not in foodDict:
+        inc = inc + 1
+        lhs = name[:inc]
+        rhs = name[inc:]
+
+    rhs foodList[1]
+
+    name = lhs
+    rhs = ''
+    inc = 0
+    lhs = name[inc]
+    while name[inc].isDigit() or name[0] == '/':
+        inc = inc + 1
+        lhs = name[:inc]
+        rhs = name[inc:]
+    foodList[0] = (lhs, rhs)
+
+    return foodList
 
 recipes = Recipe()
 border = "="*11
 counterDict = {}
 new_item = ''
-
-#Treehouse code to start with:
-
+Grocerys = {}
 shopping_list = []
+food_list = []
+store_list = []
+
+#these are the store aisles that will be used to eventually sort grocery list
+aisles = [['produce'],['meat', 'cheese', 'lunch meat',], ['dairy', 'eggs', 'juice', 'pies', 'yogurt', 'butter'],
+          ['frozen vegetables'], ['housewares'], ['cereal', 'coffee/tea'], ['baking', 'spices', 'PBJ'],
+          ['boxed dinner', 'canned meat', 'pasta/sauce'], ['soup', 'mexican', 'asian'], 
+          ['condiments', 'canned fruits/veggies & juice'], ['cookies & crackers'], ['candy, snacks, & chips'], ['bread'],
+         ['ice']]
 
 while new_item.upper() != "DONE":
     print("What should we buy from the store?  \n")
@@ -78,7 +110,7 @@ while new_item.upper() != "DONE":
         shopping_list.extend(recipes.white_chicken_chili)
     elif new_item == 'ranch popcorn chicken':
         shopping_list.extend(recipes.ranch_popcorn_chicken)
-    elif new_item == 'cheesy_chicken veggie casserole':
+    elif new_item == 'cheesy chicken veggie casserole':
         shopping_list.extend(recipes.cheesy_chicken_veggie_casserole)
     elif new_item == 'pulled pork':
         shopping_list.extend(recipes.pulled_pork)
@@ -92,8 +124,8 @@ while new_item.upper() != "DONE":
         shopping_list.extend(recipes.indian_butter_chicken)
     elif new_item == 'salsa verde chicken':
         shopping_list.extend(recipes.salsa_verde_chicken)
-    elif new_item == 'chicken_tortilla_soup':
-        shopping_list.extend(chicken_tortilla_soup)
+    elif new_item == 'chicken tortilla soup':
+        shopping_list.extend(recipes.chicken_tortilla_soup)
     elif new_item.upper() == "HELP":
         print(recipes)
     elif new_item.upper() != "DONE":
@@ -111,5 +143,7 @@ total = 0
 for recipe in counter.keys():
     total = total + counter[recipe]
     print( recipe + " " + str(counter[recipe]))
+print('* items are not needed until day of cooking.')
+
 print("There are " + str(total) + " ingredients to buy. Not including pantry items.")
 #print("There are " + str(len(counter.keys())) + " ingredients to buy. Not including pantry items.")

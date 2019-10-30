@@ -30,15 +30,30 @@ def cleanPrint(aList, Dict=False):
                 
     return counterDict
 
-def parse(name, foods):
+def parse(name, foodDict):
+    foodList = [None] * 2 
+    rhs = ''
+    inc = 1
+    lhs = name[inc]
+
+    while lhs not in foodDict:
+        inc = inc + 1
+        lhs = name[:inc]
+        rhs = name[inc:]
+
+    rhs foodList[1]
+
+    name = lhs
+    rhs = ''
     inc = 0
     lhs = name[inc]
-    rhs = name[inc + 1:]
-    while rhs not in foods.keys():
+    while name[inc].isDigit() or name[0] == '/':
         inc = inc + 1
-        lhs = name[0:inc]
-        rhs = name[inc + 1:]
-    return (lhs, rhs)
+        lhs = name[:inc]
+        rhs = name[inc:]
+    foodList[0] = (lhs, rhs)
+
+    return foodList
 
 recipes = Recipe()
 border = "="*11

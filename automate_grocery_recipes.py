@@ -59,6 +59,7 @@ recipes = Recipe()
 border = "="*11
 counterDict = {}
 new_item = ''
+Grocerys = {}
 shopping_list = []
 food_list = []
 store_list = []
